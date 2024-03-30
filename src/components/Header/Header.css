@@ -1,0 +1,48 @@
+header {
+    position:fixed;
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+
+    z-index: 1;
+
+    background-color: black;
+  
+    font-family: titulo;
+    
+    animation: dezplazar-abajo;
+
+    animation-duration: 1s;
+  }
+
+  @media (max-width : 760px)  {
+  
+    header {
+      justify-content: left ;
+    }
+
+  }
+
+  @media (min-width : 761px)  {
+  
+    header {
+      justify-content: space-between ;
+
+    }
+
+  }
+  
+
+@keyframes dezplazar-abajo {
+    0% {
+      top : -200px
+    }
+    100% {
+      top : 0px
+    }
+  }
+  
+  

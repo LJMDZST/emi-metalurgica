@@ -1,4 +1,4 @@
-
+import './CardQuote.css'
 export type TPropsCardQuote = {
   frase : string,
   urlFoto : string

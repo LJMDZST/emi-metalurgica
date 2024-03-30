@@ -1,0 +1,10 @@
+#logo {
+    display: flex;
+    align-items: center;
+    color: orangered;
+    background-color: rgb(30, 127, 127);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
+}
+

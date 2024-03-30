@@ -1,0 +1,9 @@
+
+@media screen and (min-width : 1200px) {
+    .feedbacks{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-bottom: 2em;
+    }
+}
