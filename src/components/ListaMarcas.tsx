@@ -1,12 +1,12 @@
-import { useState } from "react"
+
 import { Marca } from "./Marca"
 
 export const ListaMarcas = () => {
-  const [listaUrlLogo, setlistaUrlLogo] = useState([
+  const listaUrlLogo = [
     "https://metalurgicaegv.com.ar/wp-content/uploads/2020/12/logoko.png",
     "https://metalurgicaegv.com.ar/wp-content/uploads/2020/12/logodog.png",
     "https://metalurgicaegv.com.ar/wp-content/uploads/2020/12/logofalabella.png"
-  ])
+  ]
   
     return (
     <section className="bg-light" >
