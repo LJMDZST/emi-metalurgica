@@ -1,25 +1,39 @@
 
 @font-face {
   font-family: cuerpo;
-  src: url("assets/fonts/Old_Standard_TT/OldStandardTT-Regular.ttf");
+  src: url("assets/fonts/Mulish/Mulish-Light.ttf")
 }
 
 @font-face {
   font-family: titulo;
-  src: url("assets/fonts/Archivo_Black/ArchivoBlack-Regular.ttf");
+  src: url("assets/fonts/Mulish/Mulish-ExtraBold.ttf");
 }
 
-html {
-  font-size: 25px;
-}
+/* a{
+  color : black
+} */
 
 body {
 
 
   background-color: gray;
   font-family: cuerpo;
+  color : black
 
 }
+
+
+header,h1,h2 {
+  font-family: titulo;
+}
+
+
+
+/* 
+html {
+  font-size: 25px;
+}
+
 
 
 footer {
@@ -47,4 +61,4 @@ footer {
   to {
     margin : 40em 3em;
   }
-}
+} */

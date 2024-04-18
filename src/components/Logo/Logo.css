@@ -1,10 +1,17 @@
-#logo {
-    display: flex;
-    align-items: center;
-    color: orangered;
-    background-color: rgb(30, 127, 127);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    
+/* #logo {
+    color: blue; */
+    /* background-color: rgb(30, 127, 127); */
+    /* background-image: url("https://static.vecteezy.com/system/resources/previews/007/408/014/non_2x/stylish-panoramic-background-silver-steel-metal-texture-vector.jpg"); */
+    /* background-image: -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%, .1) 7.5%, hsla(0,0%, 100%,0) 9%),                 
+    -webkit-repeating-linear-gradient(left, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   4%, hsla(0,0%,  0%,.03) 4.5%, hsla(0,0%,  0%,0) 6%),                  
+    -webkit-repeating-linear-gradient(left, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,.15) 2.2%, hsla(0,0%,100%,0) 4%),
+    -webkit-linear-gradient(-90deg, hsl(0,0%,78%)  0%, 
+                    hsl(0,0%,90%) 47%, 
+                    hsl(0,0%,78%) 53%,
+                    hsl(0,0%,70%)100%);
 }
-
+ */
+#logo {
+    position: static;
+    margin-top: 10em;
+}

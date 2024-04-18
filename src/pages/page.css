@@ -5,15 +5,13 @@ main {
     
     padding-top: 4em;
     padding-bottom: 10em;
-    background-image:  url("https://www.infocamaras.com.ar/wp-content/uploads/2021/08/industria-metalurgia-2-1-768x512.jpeg");
   
     background-size: cover;
 
     animation: dezplazar-abajo;
     animation-duration: 6s;
-  }
+}
 
-  
 
   @keyframes dezplazar-abajo {
     0% {
