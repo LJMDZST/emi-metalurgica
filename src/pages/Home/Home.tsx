@@ -1,8 +1,8 @@
 
-import { CardHighlighted } from "../../components/CardComment/CardHighlighted"
-import { CardQuote } from "../../components/CardQuote/CardQuote"
+// import { CardHighlighted } from "../../components/CardComment/CardHighlighted"
+// import { CardQuote } from "../../components/CardQuote/CardQuote"
 import { HomeScene } from "../../components/HomeScene/HomeScene"
-import { ListaMarcas } from "../../components/ListaMarcas"
+// import { ListaMarcas } from "../../components/ListaMarcas"
 import { About } from "../About/About"
 
 
