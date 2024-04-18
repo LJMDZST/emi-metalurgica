@@ -9,11 +9,14 @@ export const ListaMarcas = () => {
   ])
   
     return (
-    <section className="en-blanco">
-    <h2>Nuestros clientes ! ! </h2>
-    <ul>
+    <section className="bg-light" >
+    <p className="text-center"><b>Nuestros clientes confían en nosotros</b> </p>
+    <ul className="row" style={{listStyle:"none"}}>
         {
-            listaUrlLogo.map( (urlLogo,index) => <Marca key={`logo-marca-${index}`} urlLogo={urlLogo} />)
+            listaUrlLogo.map( (urlLogo,index) => 
+              <li className="col">
+                <Marca key={`logo-marca-${index}`} urlLogo={urlLogo} />
+              </li>)
         }
 
     </ul>

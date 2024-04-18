@@ -1,0 +1,50 @@
+section {
+    margin-top: 10px;
+}
+  
+.resalto {
+    display: flex;
+  
+    flex-direction: column;
+  
+    align-items: center;
+    
+    justify-content: center;
+
+  
+    text-wrap: wrap;
+  
+    color: azure;
+    
+    border-radius: 10px;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+  
+  
+    animation: aparecer;
+    animation-duration: 4s;
+ }
+
+ @media screen and(min-width : 460px) {
+  .resalto {
+      margin: center;
+      padding: 5em center;
+      width: 90%;
+    
+    }
+  
+}
+
+@keyframes aparecer {
+    from {
+      color: transparent;
+      background-color: transparent;
+    }
+  
+    to {
+      color: azure;
+      background: rgba(0,0,0,0.3);
+    }
+  }
+
+  

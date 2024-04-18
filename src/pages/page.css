@@ -1,0 +1,24 @@
+main {
+    
+    display: flex;
+    flex-direction: column;
+    
+    padding-top: 4em;
+    padding-bottom: 10em;
+  
+    background-size: cover;
+
+    animation: dezplazar-abajo;
+    animation-duration: 6s;
+}
+
+
+  @keyframes dezplazar-abajo {
+    0% {
+      top : -200px
+    }
+    100% {
+      top : 0px
+    }
+  }
+  

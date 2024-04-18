@@ -1,6 +1,7 @@
-
+import './index.css'
 import { Outlet } from "react-router-dom"
-import { Navbar } from "./components/Navbar"
+import { Header } from "./components/Header/Header"
+import { Footer } from './components/Footer/Footer'
 
 
 function App() {
@@ -8,12 +9,9 @@ function App() {
 
   return (
     <>
-      <header>
-        <span className='titulo'>EMI-METALÚRGICA</span>
-        <Navbar />
-      </header> 
+      <Footer />
+      <Header />
       <Outlet />
-      <footer>Contacto : emi-metalurgica@mail.com</footer>
     </>
   )
 }
