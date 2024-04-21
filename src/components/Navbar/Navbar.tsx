@@ -36,7 +36,7 @@ export const Navbar = () => {
                 onMouseOver={handleMouseOver}
                 onMouseLeave={e => handleMouseLeave(e,2)}
       >
-        <Link className='item-menu' to={"/contact"}  style={{textDecoration:"none"}}> Contacto </Link>
+        <Link className='item-menu' to={"/contact"}  style={{textDecoration:"none"}}> Equipos </Link>
       </div>
 
       

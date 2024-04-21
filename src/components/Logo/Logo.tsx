@@ -5,7 +5,7 @@ export const Logo = () => {
   return (
     <span id="logo" >
       <Link to={'/'} style={{ color:'unset',textDecoration:"none" }}>
-        <img src={logoPng} width={80} />
+        <img src={logoPng} width={100} />
       </Link>
     </span>
   )
