@@ -1,12 +1,12 @@
 
 @font-face {
   font-family: cuerpo;
-  src: url("assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf")
+  src: url("assets/fonts/Montserrat/static/Montserrat-Regular.ttf")
 }
 
 @font-face {
   font-family: titulo;
-  src: url("assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+  src: url("assets/fonts/Montserrat/static/Montserrat-Medium.ttf");
 }
 
 /* a{

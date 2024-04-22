@@ -34,7 +34,12 @@ export const HomeScene = () => {
         { (indexSrc === 0) && <HomeImagen key={`img-home-${0}`} src={Imagen1Png} /> }
         { (indexSrc === 1) && <HomeImagen key={`img-home-${1}`}src={Imagen2Png} /> }
         { (indexSrc === 2) && <HomeImagen key={`img-home-${2}`}src={Imagen3Png} /> }
+        <div id="homeText">
 
+          <h3 > En metalurgica emi diseñamos </h3>
+          <h1 className="animate__animated animate__fadeIn animate__infinite infinite animate__slower"> soluciones a medida </h1>
+            
+        </div>
     </>
   )
 }

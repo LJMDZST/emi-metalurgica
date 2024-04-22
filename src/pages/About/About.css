@@ -1,6 +1,6 @@
-.main-about {
+/* .main-about {
   background-color: black;
-}
+} */
 .foto-nosotros {
   width: 22rem;
 }
@@ -9,6 +9,11 @@
     background-color: white;
     /* backdrop-filter:  blur(1em); */
     padding: 3em;
+    /* color: white; */
+}
+
+.hidden {
+  opacity: 0;
 }
 
 @keyframes dezplazar-abajo {

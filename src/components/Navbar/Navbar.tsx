@@ -22,24 +22,23 @@ export const Navbar = () => {
   }
 
   return (
-    <nav className="row justify-content-end align-items-center">
-      
-
-      <div className=" col-md-2 text-start"
+    <nav className="row align-items-center" style={{height:"100%"}}>
+      <div className=" col-md-2 "
         onMouseOver={handleMouseOver}
         onMouseLeave={e => handleMouseLeave(e,2)}
       >
         <Link className='item-menu' to={"/about"}  style={{textDecoration:"none"}} onClick={handleInstitucional}> Institucional </Link>
         
       </div>  
-      <div className=" col-md-2 text-start"
+      <div className=" col-md-2 "
                 onMouseOver={handleMouseOver}
                 onMouseLeave={e => handleMouseLeave(e,2)}
       >
         <Link className='item-menu' to={"/contact"}  style={{textDecoration:"none"}}> Equipos </Link>
       </div>
 
-      
+      <div className="col-md-2 ">+54 342 000554</div>
+      <div className="col-md-3 btn btn-dark "> CONTACTO </div>
     </nav>
   )
 }
