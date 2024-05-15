@@ -8,7 +8,8 @@ header {
                     hsl(0,0%,90%) 47%, 
                     hsl(0,0%,78%) 53%,
                     hsl(0,0%,70%)100%); */
-    background-color: lightgray;
+    background-color: rgb(58, 81, 159) ;
+
     font-family: titulo;  
     
     animation: dezplazar-abajo;
@@ -33,7 +34,7 @@ header {
 
   }
   
-
+/* 
 @keyframes dezplazar-abajo {
     0% {
       top : -200px
@@ -41,6 +42,6 @@ header {
     100% {
       top : 0px
     }
-  }
+  } */
   
   

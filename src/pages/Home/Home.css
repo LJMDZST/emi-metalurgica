@@ -3,14 +3,6 @@
     background-image: url("../assets/images/Recurso1.png");    
 } */
 
-#homemain{
-
-    background-image: url("../../assets/images/portada.jpeg");    
-    background-size:  cover;
-    background-position: bottom;
-    
-}
-
 
 @media screen and (min-width : 1200px) {
     .feedbacks{
@@ -21,3 +13,4 @@
         padding-bottom: 2em;
     }
 }
+
