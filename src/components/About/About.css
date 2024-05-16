@@ -1,15 +1,11 @@
-/* .main-about {
-  background-color: black;
-} */
+
 .foto-nosotros {
   width: 22rem;
 }
 
 .wrapper-nosotros {
     background-color: white;
-    /* backdrop-filter:  blur(1em); */
     padding: 3em;
-    /* color: white; */
 }
 
 .hidden {
@@ -24,13 +20,7 @@
     top : 0px
   }
 }
-  
-  /* @media screen and (min-width : 761px) {
-    main{
-        display: flex;
-        flex-direction: column;
-    
-    } */
+
 @media (min-width : 1000px) {
   .wrapper-nosotros {
     flex-direction: row;
