@@ -4,7 +4,7 @@ import logoPng from '../../assets/logo/logo.png'
 export const Logo = () => {
   return (
     <span id="logo" >
-      <Link to={'/'} style={{ color:'unset',textDecoration:"none" }}>
+      <Link to={'/emi-metalurgica'} style={{ color:'unset',textDecoration:"none" }}>
         <img src={logoPng} width={100} />
       </Link>
     </span>
