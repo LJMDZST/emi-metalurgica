@@ -1,0 +1,15 @@
+.card-container{
+    background-color: whitesmoke;
+    border : solid #3a519f 1px;
+    border-radius: 2px;
+}
+.card-marco {
+    padding: 1em ;
+    margin: 0.2em 0.2em ;
+    border : solid #3a519f 1px;
+    border-radius: 2px;
+}
+i {
+    font-size: 2em;
+    color : #3a519f
+}

@@ -1,11 +1,16 @@
-.main-home {
-    background-image: url("https://www.infocamaras.com.ar/wp-content/uploads/2021/08/industria-metalurgia-2-1-768x512.jpeg");
-}
+/* .main-home {
+    
+    background-image: url("../assets/images/Recurso1.png");    
+} */
+
+
 @media screen and (min-width : 1200px) {
     .feedbacks{
+
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         padding-bottom: 2em;
     }
 }
+

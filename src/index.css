@@ -1,12 +1,16 @@
 
 @font-face {
   font-family: cuerpo;
-  src: url("assets/fonts/Mulish/Mulish-Light.ttf")
+  src: url("assets/fonts/Montserrat/static/Montserrat-Regular.ttf")
 }
 
 @font-face {
   font-family: titulo;
-  src: url("assets/fonts/Mulish/Mulish-ExtraBold.ttf");
+  src: url("assets/fonts/Montserrat/static/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: card;
+  src: url("assets/fonts/Montserrat/static/Montserrat-ExtraBold.ttf");
 }
 
 /* a{

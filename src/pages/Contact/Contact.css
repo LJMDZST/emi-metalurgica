@@ -1,0 +1,20 @@
+#contactmain {
+    min-height: 40em;
+    background-color: lightgray;
+}
+
+textarea {
+    resize: none;
+}
+
+#form_mapa{
+    min-height: 25em;
+}
+
+
+.btn-primary {
+    border: 0;
+    border-radius: 0;
+    background-color: rgb(58, 81, 159);
+}
+

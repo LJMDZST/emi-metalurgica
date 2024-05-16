@@ -1,6 +1,8 @@
 
 import { Link } from "react-router-dom"
+
 import './Navbar.css'
+
 export const Navbar = () => {
 
   const handleMouseOver = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) =>{
@@ -21,25 +23,30 @@ export const Navbar = () => {
     about?.scrollIntoView();
   }
 
-  return (
-    <nav className="row justify-content-end align-items-center">
-      
+  const handleClickInstagram = (e : React.MouseEvent<HTMLAnchorElement, MouseEvent>)=>{
+    e.preventDefault();
+    window.open('https://www.instagram.com/emi_metalurgica/');
+  }
 
-      <div className=" col-md-2 text-start"
+  return (
+    <nav className="row  align-items-center justify-content-start gx-5 ms-4" style={{height:"100%"}}>
+      <div className=" col-md-2 "
         onMouseOver={handleMouseOver}
         onMouseLeave={e => handleMouseLeave(e,2)}
       >
         <Link className='item-menu' to={"/about"}  style={{textDecoration:"none"}} onClick={handleInstitucional}> Institucional </Link>
         
       </div>  
-      <div className=" col-md-2 text-start"
+      <div className=" col-md-2 "
                 onMouseOver={handleMouseOver}
                 onMouseLeave={e => handleMouseLeave(e,2)}
       >
-        <Link className='item-menu' to={"/contact"}  style={{textDecoration:"none"}}> Contacto </Link>
+        <Link className='item-menu' to={"/equipos"}  style={{textDecoration:"none"}}> Equipos </Link>
       </div>
 
-      
+  
+      <Link to={'/contact'} className="col-md-3 btn btn-dark "> CONTACTO </Link>
+      <Link to={'#'} onClick={handleClickInstagram} className="col-md-1 btn " title="instagram/emi_metalurgica"> <i className="bi bi-instagram text-light" /> </Link>
     </nav>
   )
 }

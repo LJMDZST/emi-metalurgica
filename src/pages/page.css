@@ -7,6 +7,7 @@ main {
     padding-bottom: 10em;
   
     background-size: cover;
+    background-image: url("../assets/images/Recurso1.png");
 
     animation: dezplazar-abajo;
     animation-duration: 6s;
