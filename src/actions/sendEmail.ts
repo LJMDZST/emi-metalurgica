@@ -9,6 +9,7 @@ type TDataEmail = {
 
 export const  sendEmail = ( data : TDataEmail )=>{
     return async()=>{
+        console.log( data );
         // let transport = nodemailer.createTransport({
         //     host : 'localhost',
         //     port : 587,
