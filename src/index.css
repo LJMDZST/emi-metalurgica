@@ -13,9 +13,6 @@
   src: url("assets/fonts/Montserrat/static/Montserrat-ExtraBold.ttf");
 }
 
-/* a{
-  color : black
-} */
 
 body {
 
@@ -32,37 +29,3 @@ header,h1,h2 {
 }
 
 
-
-/* 
-html {
-  font-size: 25px;
-}
-
-
-
-footer {
-  padding: 1em;
-  background-color: black;
-  color: orangered;
-  text-align: center;
-}
-
-
-.en-blanco {
-  background: azure;
-}
-
-
-
-
-
-
-@keyframes modalizar {
-  from {
-    margin : 1em;
-  }
-
-  to {
-    margin : 40em 3em;
-  }
-} */
