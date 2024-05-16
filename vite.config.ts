@@ -7,5 +7,5 @@ export default defineConfig({
   server : {
     host : true
   },
-  base : 'https://ljmdzst.github.io/emi-metalurgica/'
+  base : '/emi-metalurgica/'
 })
