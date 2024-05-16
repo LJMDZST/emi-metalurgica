@@ -34,18 +34,18 @@ export const Navbar = () => {
         onMouseOver={handleMouseOver}
         onMouseLeave={e => handleMouseLeave(e,2)}
       >
-        <Link className='item-menu' to={"/about"}  style={{textDecoration:"none"}} onClick={handleInstitucional}> Institucional </Link>
+        <Link className='item-menu' to={"about"}  style={{textDecoration:"none"}} onClick={handleInstitucional}> Institucional </Link>
         
       </div>  
       <div className=" col-md-2 "
                 onMouseOver={handleMouseOver}
                 onMouseLeave={e => handleMouseLeave(e,2)}
       >
-        <Link className='item-menu' to={"/equipos"}  style={{textDecoration:"none"}}> Equipos </Link>
+        <Link className='item-menu' to={"equipos"}  style={{textDecoration:"none"}}> Equipos </Link>
       </div>
 
   
-      <Link to={'/contact'} className="col-md-3 btn btn-dark "> CONTACTO </Link>
+      <Link to={'contact'} className="col-md-3 btn btn-dark "> CONTACTO </Link>
       <Link to={'#'} onClick={handleClickInstagram} className="col-md-1 btn " title="instagram/emi_metalurgica"> <i className="bi bi-instagram text-light" /> </Link>
     </nav>
   )

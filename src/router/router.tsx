@@ -8,7 +8,7 @@ import { Equipos } from "../pages/Equipos/Equipos";
 
 export const router = createBrowserRouter([
     {
-        path : "/",
+        path : "/emi-metalurgica",
         element : <App />,
         children : [
             {
