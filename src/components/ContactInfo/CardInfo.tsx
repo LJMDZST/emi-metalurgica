@@ -10,10 +10,10 @@ export const CardInfo = ( {icon,texto} : TDataCardInfo ) => {
     <div className="card-container">
         <div className='card-marco'>
             <div className='row align-items-center'>
-                <div className='col-2 '>
+                <div className='col-lg-2 '>
                     {icon}
                 </div>
-                <div className='col '>
+                <div className='col-lg-8 '>
                    {texto}
                 </div>
             </div>

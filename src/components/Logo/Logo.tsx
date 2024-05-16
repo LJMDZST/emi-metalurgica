@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import logoPng from '../../assets/logo/logo.png'
-// import './Logo.css'
+import './Logo.css'
 export const Logo = () => {
   return (
     <span id="logo" >

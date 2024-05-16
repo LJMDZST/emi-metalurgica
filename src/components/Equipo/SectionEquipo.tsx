@@ -10,11 +10,11 @@ export const SectionEquipo = ({
     srcImg3 = ''
 }) => {
   return (
-    <div className='container-fluid bg-light bg-gradient p-5' style={{margin : '-1em auto'}}>
-         <div className="row justify-content-center row-cols-3 ">
-            <div className="col-3 d-flex justify-content-center"> <CardEquipo titulo={titulo1} srcImg={srcImg1}/></div>
-            <div className="col-3 d-flex justify-content-center"> <CardEquipo titulo={titulo2}  srcImg={srcImg2}/></div>
-            <div className="col-3 d-flex justify-content-center"> <CardEquipo titulo={titulo3}  srcImg={srcImg3}/></div>
+    <div className='container-md-10 bg-light bg-gradient p-5' style={{margin : '-1em auto'}}>
+         <div className="row justify-content-center  ">
+            <div className="col-lg-3 d-flex justify-content-center"> <CardEquipo titulo={titulo1} srcImg={srcImg1}/></div>
+            <div className="col-lg-3 d-flex justify-content-center"> <CardEquipo titulo={titulo2}  srcImg={srcImg2}/></div>
+            <div className="col-lg-3 d-flex justify-content-center"> <CardEquipo titulo={titulo3}  srcImg={srcImg3}/></div>
             
         </div>
     </div>
