@@ -19,6 +19,12 @@ export const Navbar = () => {
 
   
 
+  const handleInstitucional = (e : React.MouseEvent<HTMLAnchorElement, MouseEvent>)=>{
+    e.preventDefault();
+    const about = document.getElementById("aboutSection");
+    about?.scrollIntoView();
+  }
+
   const handleClickInstagram = (e : React.MouseEvent<HTMLAnchorElement, MouseEvent>)=>{
     e.preventDefault();
     window.open('https://www.instagram.com/emi_metalurgica/');
@@ -26,7 +32,13 @@ export const Navbar = () => {
 
   return (
     <nav className="row align-items-center justify-content-start gx-5 " style={{height:"100%"}}>
-     
+       <div className=" col-md-2 text-center "
+        onMouseOver={handleMouseOver}
+        onMouseLeave={e => handleMouseLeave(e,2)}
+      >
+        <Link className='item-menu' to={"about"}  style={{textDecoration:"none"}} onClick={handleInstitucional}> INSTITUCIONAL </Link>
+        
+      </div> 
       <div className=" col-md-2  text-center"
                 onMouseOver={handleMouseOver}
                 onMouseLeave={e => handleMouseLeave(e,2)}
