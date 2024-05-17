@@ -54,7 +54,7 @@ export const Home = () => {
                     <div className="row justify-content-center ms-5 mt-5">
                       <div className="col-10 ">
                           <h1 style={{ fontFamily : "homeH1" }}>METALURGICA EMI </h1>
-                          <h2 style={{ fontFamily : "homeH2" }}> Diseñamos y fabricamos equipos industriales </h2>
+                          <h2 style={{ fontFamily : "homeH2" , fontSize : "1.12em" }}> Diseñamos y fabricamos equipos industriales </h2>
                       </div>
                     </div>
                   </div>
