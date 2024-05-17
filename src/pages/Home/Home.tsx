@@ -37,7 +37,7 @@ export const Home = () => {
   
   return (
     
-      <main className='container-fluid animate__animated animate__fadeIn' >
+      <main className='container animate__animated animate__fadeIn' >
 
 
           <div className='row row-cols-1 bg-light' >
