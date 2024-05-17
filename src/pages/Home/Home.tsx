@@ -5,9 +5,10 @@
 // import { ListaMarcas } from "../../components/ListaMarcas"
 import { About } from "../../components/About/About"
 import { SectionEquipo } from "../../components/Equipo/SectionEquipo";
-import imgHome1 from '../../assets/images/portada.jpeg';
-import imgHome2 from '../../assets/images/Recurso1.png';
-import imgHome3 from '../../assets/images/Recurso2.png';
+import imgHome1 from '../../assets/images/home/portada.jpeg';
+import imgHome2 from '../../assets/images/home/Recurso1.png';
+import imgHome3 from '../../assets/images/home/Recurso2.png';
+
 
 import cardEquipo1 from '../../assets/images/card-equipo1.jpg'
 import  './Home.css';
@@ -21,7 +22,7 @@ export const Home = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      if(c === 2){
+      if(c === imagenes.lenght-1 ){
         setC(0);
       } else {
         setC(c+1);
