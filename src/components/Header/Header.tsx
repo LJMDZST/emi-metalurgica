@@ -24,7 +24,7 @@ export const Header = () => {
 
   return (
     <header id='cabecera' className='container-fluid position-sticky top-0 ' style={{zIndex : 1000,minHeight:"9em"} }>
-      <div className='row' style={{  maxWidth : width > 1360 ? '100em' : '75.5em' , minHeight:"9em"}}>
+      <div className='row' style={{  maxWidth : width > 1360 ? '100em' : width > 900 ? '90.5em' : '75.5em' , minHeight:"9em"}}>
         <div className={width < 700 ? classValue43 : classValue169} style={{backgroundColor : 'white'}}>
          <Logo />
         </div>

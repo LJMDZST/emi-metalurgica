@@ -13,7 +13,7 @@ export const Navbar = () => {
   }
   const handleMouseLeave = (e : React.MouseEvent<HTMLDivElement, MouseEvent>,width : number) =>{
     e.preventDefault();
-    e.currentTarget.className = `col-md-${width} text-start`;
+    e.currentTarget.className = `col-md-${width} text-center`;
 
   }
 
@@ -34,18 +34,18 @@ export const Navbar = () => {
         onMouseOver={handleMouseOver}
         onMouseLeave={e => handleMouseLeave(e,2)}
       >
-        <Link className='item-menu' to={"about"}  style={{textDecoration:"none"}} onClick={handleInstitucional}> Institucional </Link>
+        <Link className='item-menu' to={"about"}  style={{textDecoration:"none"}} onClick={handleInstitucional}> INSTITUCIONAL </Link>
         
       </div>  
       <div className=" col-md-2  text-center"
                 onMouseOver={handleMouseOver}
                 onMouseLeave={e => handleMouseLeave(e,2)}
       >
-        <Link className='item-menu' to={"equipos"}  style={{textDecoration:"none"}}> Equipos </Link>
+        <Link className='item-menu' to={"equipos"}  style={{textDecoration:"none"}}> EQUIPOS </Link>
       </div>
 
   
-      <Link to={'contact'} className="col-md-3 btn btn-dark "> CONTACTO </Link>
+      <Link id="btn-contacto" to={'contact'} className="col-md-3 btn  "> CONTACTO </Link>
       <Link to={'#'} onClick={handleClickInstagram} className="col-md-1 btn " title="instagram/emi_metalurgica"> <i className="bi bi-instagram text-light" /> </Link>
     </nav>
   )
