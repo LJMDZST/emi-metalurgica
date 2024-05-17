@@ -16,7 +16,14 @@
   font-family: card;
   src: url("assets/fonts/Montserrat/static/Montserrat-ExtraBold.ttf");
 }
-
+@font-face {
+  font-family: homeH1;
+  src: url("assets/fonts/Montserrat/static/Monserrat-Black.ttf")
+}
+@font-face {
+  font-family: homeH2;
+  src: url("assets/fonts/Montserrat/static/Monserrat-Medium.ttf")
+}
 
 body {
 
