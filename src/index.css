@@ -18,11 +18,11 @@
 }
 @font-face {
   font-family: homeH1;
-  src: url("assets/fonts/Montserrat/static/Monserrat-Black.ttf")
+  src: url("assets/fonts/Montserrat/static/Montserrat-Black.ttf")
 }
 @font-face {
   font-family: homeH2;
-  src: url("assets/fonts/Montserrat/static/Monserrat-Medium.ttf")
+  src: url("assets/fonts/Montserrat/static/Montserrat-Medium.ttf")
 }
 
 body {
