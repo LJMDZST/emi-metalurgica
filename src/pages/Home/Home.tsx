@@ -10,7 +10,7 @@ import imgHome2 from '../../assets/images/home/Recurso1.png';
 import imgHome3 from '../../assets/images/home/Recurso2.png';
 
 
-import cardEquipo1 from '../../assets/images/card-equipo1.jpg'
+import cardEquipo1 from '../../assets/images/equipos-home/card-equipo1.jpg'
 import  './Home.css';
 import { useEffect, useState } from "react";
 import { Contact } from "../Contact/Contact";
