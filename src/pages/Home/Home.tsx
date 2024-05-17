@@ -48,30 +48,30 @@ export const Home = () => {
                   backgroundPosition : 'center',
                   backgroundColor : "rgba(0,0,0,0.3)",
                   transition : 'background-image 1000ms ease-in',
-                  minHeight:"30em"
+                  minHeight:"40em"
                 }}>
-              <div   className="row align-items-center " >
-                  <div className="col-5 p-3 ms-3  text-light animate__animated animate__fadeInDown  animate__slow" >
-                    <div className="row justify-content-center ms-5 mt-5">
-                      <div className="col-10 ">
-                          <h1 >METALURGICA EMI </h1>
-                          <h2 style={{ fontSize : "1.12em" }}> Diseñamos y fabricamos equipos industriales </h2>
+                  <div   className="row align-items-center " >
+                      <div className="col-5 p-3 ms-3  text-light animate__animated animate__fadeInDown  animate__slow" >
+                        <div className="row justify-content-center ms-5 mt-5">
+                          <div className="col-10 ">
+                              <h1 >METALURGICA EMI </h1>
+                              <h2 style={{ fontSize : "1.12em" }}> Diseñamos y fabricamos equipos industriales </h2>
+                          </div>
+                        </div>
                       </div>
-                    </div>
                   </div>
-              </div>
               
             </div>
-            <div className="col d-flex justify-content-center p-0" style={{minHeight:"30em"}}>
+            <div className="col d-flex justify-content-center p-0" style={{minHeight:"40em"}}>
                 <About />
             </div>
-            <div className="col p-5 bg-white text-center" style={{minHeight:"30em"}}>
+            <div className="col p-5 bg-white text-center" style={{minHeight:"40em"}}>
                <SectionEquipo
                   srcImg1={cardEquipo1} srcImg2={cardEquipo1} srcImg3={cardEquipo1}
                   titulo1='EQUIPO 1'  titulo2='EQUIPO 2'  titulo3='EQUIPO 3'
                />
             </div>
-            <div className="col p-0 " style={{minHeight:"30em"}}>
+            <div className="col p-0 " style={{minHeight:"40em"}}>
                 <Contact />
             </div>
           </div>
