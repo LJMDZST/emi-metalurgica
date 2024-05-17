@@ -1,6 +1,6 @@
 import { SectionEquipo } from "../../components/Equipo/SectionEquipo"
 
-import cardEquipo1 from '../../assets/images/card-equipo1.jpg'
+import cardEquipo1 from '../../assets/images/equipos-home/card-equipo1.jpg'
 export const Equipos = () => {
   return (
     <div className="container">
