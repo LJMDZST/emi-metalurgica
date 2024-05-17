@@ -3,7 +3,12 @@
     background-image: url("../assets/images/Recurso1.png");    
 } */
 
-
+h1 {
+    font-family : homeH1;
+}
+h2 {
+    font-family : homeH2;
+}
 @media screen and (min-width : 1200px) {
     .feedbacks{
 
