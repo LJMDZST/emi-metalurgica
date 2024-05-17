@@ -22,7 +22,7 @@ export const Home = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      if(c === imagenes.lenght-1 ){
+      if(c === imagenes.length-1 ){
         setC(0);
       } else {
         setC(c+1);
