@@ -53,8 +53,8 @@ export const Home = () => {
                   <div className="col-5 p-3 ms-3  text-light animate__animated animate__fadeInDown  animate__slow" >
                     <div className="row justify-content-center ms-5 mt-5">
                       <div className="col-10 ">
-                          <h1 className="fw-bold">METALURGICA EMI </h1>
-                          <h2 className=""> Diseñamos y fabricamos equipos industriales </h2>
+                          <h1 style={{ fontFamily : "homeH1" }}>METALURGICA EMI </h1>
+                          <h2 style={{ fontFamily : "homeH2" }}> Diseñamos y fabricamos equipos industriales </h2>
                       </div>
                     </div>
                   </div>
