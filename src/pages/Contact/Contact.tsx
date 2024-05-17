@@ -20,7 +20,7 @@ export const Contact = () => {
     }
 
   return (
-    <main id='contactmain' className="container-fluid" >
+    <main id='contactmain' className="container" >
         <div  className="row row-cols-1 ms-md-5 me-md-5 animate__animated animate__fadeIn">
             <div  className="col mt-2">   
                 <div id='iconos' className="row ">
