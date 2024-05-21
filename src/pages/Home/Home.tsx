@@ -76,7 +76,7 @@ export const Home = () => {
             <div className="col d-flex justify-content-center p-0" style={{minHeight:"40em"}}>
                 <About />
             </div>
-            <div className="col p-5 bg-white text-center" style={{minHeight:"40em"}}>
+            <div className="col pe-0 ps-0 pt-5 pb-5 bg-white text-center" style={{minHeight:"40em"}}>
                <SectionEquipo
                   srcImg1={imgHome1} srcImg2={imgHome1} srcImg3={imgHome1}
                   titulo1='EQUIPO 1'  titulo2='EQUIPO 2'  titulo3='EQUIPO 3'
