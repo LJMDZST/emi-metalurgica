@@ -10,7 +10,7 @@ import imgHome2 from '../../assets/images/home/Recurso1.png';
 import imgHome3 from '../../assets/images/home/Recurso2.png';
 
 
-import cardEquipo1 from '../../assets/images/equipos-home/card-equipo1.jpg'
+// import cardEquipo1 from '../../assets/images/equipos-home/card-equipo1.jpg'
 import  './Home.css';
 import { useEffect, useState } from "react";
 import { Contact } from "../Contact/Contact";
@@ -38,7 +38,7 @@ export const Home = () => {
   
   return (
     
-      <main className='container animate__animated animate__fadeIn' >
+      <main className='container-fluid animate__animated animate__fadeIn' >
 
 
           <div className='row row-cols-1 bg-light' >
@@ -48,17 +48,28 @@ export const Home = () => {
                   backgroundPosition : 'center',
                   backgroundColor : "rgba(0,0,0,0.3)",
                   transition : 'background-image 1000ms ease-in',
+            
                   minHeight:"40em"
                 }}>
-                  <div   className="row align-items-center " >
-                      <div className="col-5 p-3 ms-3  text-light animate__animated animate__fadeInDown  animate__slow" >
-                        <div className="row justify-content-center ms-5 mt-5">
-                          <div className="col-10 ">
-                              <h1 >METALURGICA EMI </h1>
-                              <h2 style={{ fontSize : "1.12em" }}> Diseñamos y fabricamos equipos industriales </h2>
+                  <div style={{
+                    backgroundColor : 'rgba(57,80,158,0.5)',
+                    height : '100%'
+                  }}>
+                    <div className="container" style={{height : '100%'}}>
+                      <div   className="row align-items-center " >
+                          <div className="col-5 p-3 ms-3  text-light animate__animated animate__fadeInDown  animate__slow" >
+                            <div className="row justify-content-center ms-5 mt-5">
+                              <div className="col-10 ">
+                                  <h1  ><span className="text-start">EQUIPOS </span></h1>
+                                  <h1  ><span className="text-start">METALÚRGICOS </span></h1>
+                                  <h1  ><span className="text-start">INDUSTRIALES </span></h1>
+                                  
+                                  <h2 style={{ fontSize : "1.12em" }}> Diseñamos y fabricamos equipos industriales </h2>
+                              </div>
+                            </div>
                           </div>
-                        </div>
                       </div>
+                    </div>
                   </div>
               
             </div>
@@ -67,7 +78,7 @@ export const Home = () => {
             </div>
             <div className="col p-5 bg-white text-center" style={{minHeight:"40em"}}>
                <SectionEquipo
-                  srcImg1={cardEquipo1} srcImg2={cardEquipo1} srcImg3={cardEquipo1}
+                  srcImg1={imgHome1} srcImg2={imgHome1} srcImg3={imgHome1}
                   titulo1='EQUIPO 1'  titulo2='EQUIPO 2'  titulo3='EQUIPO 3'
                />
             </div>
