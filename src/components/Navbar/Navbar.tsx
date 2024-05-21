@@ -1,21 +1,8 @@
 
 import { Link } from "react-router-dom"
 
-import './Navbar.css'
 
 export const Navbar = () => {
-
-  const handleMouseOver = (e : React.MouseEvent<HTMLDivElement, MouseEvent>) =>{
-    e.preventDefault();
-
-    e.currentTarget.className = `${e.currentTarget.className} animate__animated animate__pulse`;
-
-  }
-  const handleMouseLeave = (e : React.MouseEvent<HTMLDivElement, MouseEvent>,width : number) =>{
-    e.preventDefault();
-    e.currentTarget.className = `col-md-${width} text-center`;
-
-  }
 
   
 
@@ -31,24 +18,30 @@ export const Navbar = () => {
   }
 
   return (
-    <nav className="row align-items-center justify-content-start gx-5 " style={{height:"100%"}}>
-       <div className=" col-md-2 text-center "
-        onMouseOver={handleMouseOver}
-        onMouseLeave={e => handleMouseLeave(e,2)}
-      >
-        <Link className='item-menu' to={"about"}  style={{textDecoration:"none"}} onClick={handleInstitucional}> INSTITUCIONAL </Link>
-        
-      </div> 
-      <div className=" col-md-2  text-center"
-                onMouseOver={handleMouseOver}
-                onMouseLeave={e => handleMouseLeave(e,2)}
-      >
-        <Link className='item-menu' to={"equipos"}  style={{textDecoration:"none"}}> EQUIPOS </Link>
+    <nav className=" navbar navbar-expand-md bg-transparent " style={{height:"100%"}}>
+      <div className="container-fluid d-flex justify-content-end">
+        <button className="navbar-toggler" type="button" 
+            data-bs-toggle="collapse" data-bs-target="#menu" >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse " id="menu">
+          <div className="navbar-nav me-auto"  >
+            <Link className='nav-link align-content-center' to={"about"}  style={{textDecoration:"none"}} onClick={handleInstitucional}>
+              <span className="navbar-text text-white"> INSTITUCIONAL</span> 
+            </Link>
+            <Link className='nav-link align-content-center' to={"equipos"}  style={{textDecoration:"none"}}> 
+             <span className="navbar-text text-white"> EQUIPOS </span> 
+            </Link>
+            <Link  className="nav-link  " to={'contact'} style={{textDecoration:"none"}} > 
+              <span className="navbar-text btn btn-dark text-white">  CONTACTO  </span> 
+            </Link>
+            <Link className=" nav-link " to={'#'} onClick={handleClickInstagram} style={{textDecoration:"none"}}  title="instagram/emi_metalurgica"> 
+              <span className="navbar-text"><i className="bi bi-instagram text-light" /> </span>
+            </Link>
+          </div>
+        </div>
+     
       </div>
-
-  
-      <Link id="btn-contacto" to={'contact'} className="col-md-3 btn  "> CONTACTO </Link>
-      <Link to={'#'} onClick={handleClickInstagram} className="col-md-1 btn " title="instagram/emi_metalurgica"> <i className="bi bi-instagram text-light" /> </Link>
     </nav>
   )
 }

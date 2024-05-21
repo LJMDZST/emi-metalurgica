@@ -1,35 +1,42 @@
 
 import { Navbar } from '../Navbar/Navbar'
 import { Logo } from '../Logo/Logo';
-import './Header.css'
+
 import { useEffect, useState } from 'react';
 export const Header = () => {
-
-  const classValue43 = 'col-md-5  d-flex justify-content-center align-content-center';
-  const classValue169 = 'col-md-5  d-flex justify-content-end align-content-center';
-  const [width, setWidth] = useState(window.innerWidth)
+  
+  const [scrollY, setScrollY] = useState(window.scrollY);
   useEffect(() => {
-    const handleResize = () => {
-      setWidth(window.innerWidth);
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
     };
-
-    window.addEventListener('resize', handleResize);
+   
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, [])
   
   
 
   return (
-    <header id='cabecera' className='container position-sticky top-0 ' style={{zIndex : 1000,minHeight:"9em"} }>
-      <div className='row' style={{  maxWidth : width > 1360 ? '100em' : width > 900 ? '90.5em' : '75.5em' , minHeight:"9em"}}>
-        <div className={width < 700 ? classValue43 : classValue169} style={{backgroundColor : 'white'}}>
-         <Logo />
-        </div>
-        <div className='col-md-7 animate__animated animate__fadeInRight'>
-          <Navbar />
+    <header id='cabecera' className='container-fluid position-sticky top-0 p-0' style={{
+      fontFamily : 'header',
+       position : scrollY > 10 ? 'sticky' : undefined,
+       zIndex : scrollY > 10 ? 3 : undefined
+       } }>
+      <div className={scrollY < 10 ? 'container-fluid' : 'container-md' } >
+        <div className='row' >
+          <div className='col-5  d-flex justify-content-end align-content-center' 
+            style={{backgroundColor : scrollY === 0 ? 'rgba(255,255,255)' : 'rgba(255,255,255,0.3)'}}>
+            <Logo />
+          </div>
+          <div className='col-7 animate__animated animate__fadeInRight'
+            style={{backgroundColor :  scrollY === 0 ? 'rgb(57,80,158)': 'rgba(57,80,158,0.9)'}}
+          >
+            <Navbar />
+          </div>
         </div>
       </div>
     </header> 
