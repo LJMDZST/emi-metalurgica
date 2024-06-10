@@ -1,6 +1,6 @@
 import { sendEmail } from '../../actions/sendEmail';
 import { CardInfo } from '../../components/ContactInfo/CardInfo';
-import './Contact.css'
+
 export const Contact = () => {
 
 
@@ -20,7 +20,11 @@ export const Contact = () => {
     }
 
   return (
-    <main id='contactmain' className="container" >
+    <main  className="container-fluid p-0 m-0"  style={{
+        minHeight : ' 40em',
+        backgroundColor : 'rgba(57,80,158)'
+    }}>
+        <div className='container'>
         <div  className="row row-cols-1 ms-md-5 me-md-5 animate__animated animate__fadeIn">
             <div  className="col mt-2">   
                 <div id='iconos' className="row ">
@@ -32,26 +36,33 @@ export const Contact = () => {
             </div>
             </div>
             <div className="col">
-                <div id='form_mapa' className="row ">
+                <div  className="row "  style={{  minHeight: '25em'}}>
                     <div className="col-md">
                         <form onSubmit={handleSendMail}>
                             <div className="row row-cols-1" >
                                 <div className="col m-1">
-                                    <input className="form-control " placeholder='Nombre' type={'text'} />
+                                    <label className='form-label text-white' htmlFor={'Nombre'}>Nombre</label>
+                                    <input  id={'Nombre'}className="form-control  border border-top-0 border-start-0 border-end-0 rounded-0 t"  type={'text'} />
+                                   
                                 </div>
                                 <div className="col m-1">
-                                    <input className="form-control" placeholder='Email' type={'email'} />
+                                    <label className='form-label text-white' htmlFor={'Email'}>Email</label>
+                                    <input id={'Email'} className="form-control  border border-top-0 border-start-0 border-end-0 rounded-0 "  type={'email'} />
                                 </div>
                                 <div className="col m-1">
-                                    <input className="form-control" placeholder='Asunto' type={'text'} />
+                                    <label className='form-label text-white' htmlFor={'Asunto'}>Asunto</label>
+                                    <input id={'Asunto'}className="form-control  border border-top-0 border-start-0 border-end-0 rounded-0 "  type={'text'} />
                                 </div>
                                 <div className="col m-1">
-                                    <textarea className="form-control" placeholder='Mensaje' rows={6} />
+                                    <label className='form-label text-white' htmlFor={'Mensaje'}>Mensaje</label>
+                                    <textarea id={'Mensaje'} className="form-control border border-top-0 border-start-0 border-end-0 rounded-0 "  rows={6} style={{resize : 'none'}}/>
                                 </div>
                                 <div className="col m-1">
-                                    <input className='btn btn-primary' type={'submit'} value={'Enviar'}/>
+                                    <input className='btn btn-outline-light rounded-0' type={'submit'} value={'Enviar'} 
+                                       
+                                    />
                                 </div>
-                                
+                              
                             </div>
                         </form>
                     </div>
@@ -60,7 +71,8 @@ export const Contact = () => {
                     </div>
                 </div>
             </div>
-    </div>
+        </div>
+        </div>
     </main>
   )
 }

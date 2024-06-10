@@ -10,10 +10,11 @@ import imgHome2 from '../../assets/images/home/Recurso1.png';
 import imgHome3 from '../../assets/images/home/Recurso2.png';
 
 
-// import cardEquipo1 from '../../assets/images/equipos-home/card-equipo1.jpg'
+import cardEquipo1 from '../../assets/images/equipos-home/card-equipo1.jpg'
 import  './Home.css';
 import { useEffect, useState } from "react";
 import { Contact } from "../Contact/Contact";
+import { Link } from "react-router-dom";
 export const Home = () => {
 
   const imagenes = [imgHome1,imgHome2,imgHome3];
@@ -47,7 +48,7 @@ export const Home = () => {
                   backgroundSize : 'cover',
                   backgroundPosition : 'center',
                   backgroundColor : "rgba(0,0,0,0.3)",
-                  transition : 'background-image 1000ms ease-in',
+                  transition : 'background-image 1s ease-in',
             
                   minHeight:"40em"
                 }}>
@@ -73,16 +74,27 @@ export const Home = () => {
                   </div>
               
             </div>
-            <div className="col d-flex justify-content-center p-0" style={{minHeight:"40em"}}>
+            <div className="col d-flex justify-content-center p-0" style={{ minHeight:"40em"}}>
                 <About />
             </div>
-            <div className="col pe-0 ps-0 pt-5 pb-5 bg-white text-center" style={{minHeight:"40em"}}>
-               <SectionEquipo
-                  srcImg1={imgHome1} srcImg2={imgHome1} srcImg3={imgHome1}
-                  titulo1='EQUIPO 1'  titulo2='EQUIPO 2'  titulo3='EQUIPO 3'
-               />
-            </div>
-            <div className="col p-0 " style={{minHeight:"40em"}}>
+            <div className="col bg-white text-center" 
+            style={{
+               minHeight:"45em",
+               paddingBottom : '6em'
+              }}
+            >
+                 <SectionEquipo
+                          handleMostrarModalEquipo={()=>{}}
+                          invertido={false}
+                          srcImg1={cardEquipo1} srcImg2={imgHome2} srcImg3={imgHome3}
+                          titulo1='EQUIPO 1'  titulo2='EQUIPO 2'  titulo3='EQUIPO 3'
+                      />
+                <div className="d-flex justify-content-center pt-4">
+                  <Link className=' btn rounded-0 m-2' to={'equipos'} style={{backgroundColor : 'rgb(57,80,158)', color : 'rgb(255,255,255)' }}>  VEA TODOS NUESTROS EQUIPOS </Link>
+                </div>
+               
+             </div> 
+            <div className="col p-0 " style={{minHeight:"40em", margin : '-1em'}}>
                 <Contact />
             </div>
           </div>

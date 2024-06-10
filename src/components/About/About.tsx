@@ -6,7 +6,7 @@ export const About = () => {
 
 
   return (
-    <main className='row align-items-center justify-content-center ' >
+    <main id="about" className='row align-items-center justify-content-center ' >
       <div  className='col  text-center' >
             <p id="aboutP1" data-aos="fade-down" data-aos-duration="800" className="fs-4">Somos una empresa con más de 10 años de experiencia.</p>
             <p id="aboutP2" data-aos="fade-down" data-aos-duration="900" className="fs-4">Contamos con la capacidad necesaria para el desarrollo de proyectos requeridos por el cliente.</p>
