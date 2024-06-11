@@ -2,7 +2,6 @@
 import contacto from '../../data/contacto.json';
 import { Logo } from '../Logo/Logo';
 import { NavbarFooter } from '../Navbar/NavbarFooter';
-import { T_TIPO, TituloPrincipal } from '../TituloPrincipal/TituloPrincipal';
 
 export const Footer = () => {
   
