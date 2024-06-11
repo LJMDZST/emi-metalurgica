@@ -8,8 +8,8 @@ export const Navbar = () => {
         e.preventDefault();
         window.open('https://www.instagram.com/emi_metalurgica/');
     }
-    const handleInstitucional = (e : React.MouseEvent<HTMLAnchorElement, MouseEvent>)=>{
-        e.preventDefault();
+    const handleInstitucional = ()=>{
+        
         const about = document.getElementById("aboutSection");
         if(about) {
           about.scrollIntoView();
@@ -21,7 +21,7 @@ export const Navbar = () => {
     const linkStyle : React.CSSProperties= {textDecoration:"none", fontSize : '0.7em'}
   return (
     <nav className=" navbar navbar-expand-md bg-transparent " >
-      <div className="container justify-content-center"><a className="navbar-brand" href="#"><Logo small={true}/></a></div>
+      <div className="container justify-content-center"><Logo small={true}/></div>
       <div className="container-fluid ">
         <button className="navbar-toggler" type="button" 
             data-bs-toggle="collapse" data-bs-target="#menu" >

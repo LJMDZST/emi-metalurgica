@@ -27,7 +27,7 @@ export const CardEquipo = ({titulo = '', srcImg = '#', invertido = false}) => {
   return (
     <div className={'container-lg'} style={styles} onMouseOver={handleOver} onMouseLeave={handleLeave} >
        <div className="row">
-            <div className={`col-md d-flex align-items-center justify-content-center `} 
+            <div className={`${invertido ? 'col-md-4' : 'col-md-8'} d-flex align-items-center justify-content-center `} 
                 style={invertido ? undefined : { backgroundImage : `url(${srcImg})`, backgroundSize : 'cover', height : '20em' } }
             >
                 {
@@ -35,7 +35,7 @@ export const CardEquipo = ({titulo = '', srcImg = '#', invertido = false}) => {
                 }
                 
             </div>
-            <div className="col-md d-flex align-items-center justify-content-center"
+            <div className={`${invertido ? 'col-md-8' : 'col-md-4'} d-flex align-items-center justify-content-center`}
                 style={invertido ?  { backgroundImage : `url(${srcImg})`, backgroundSize : 'cover', height : '20em'  } : undefined }
             >
                 {

@@ -11,10 +11,10 @@ import imgHome3 from '../../assets/images/home/Recurso2.png';
 
 
 import cardEquipo1 from '../../assets/images/equipos-home/card-equipo1.jpg'
-import  './Home.css';
+
 import { useEffect, useState } from "react";
-import { Contact } from "../Contact/Contact";
-import { Link } from "react-router-dom";
+import { T_TIPO, TituloPrincipal } from "../../components/TituloPrincipal/TituloPrincipal";
+import { BotonVerEquipos } from "../../components/BotonVerEquipos/BotonVerEquipos";
 export const Home = () => {
 
   const imagenes = [imgHome1,imgHome2,imgHome3];
@@ -61,9 +61,7 @@ export const Home = () => {
                           <div className="col-5 p-3 ms-3  text-light animate__animated animate__fadeInDown  animate__slow" >
                             <div className="row justify-content-center ms-5 mt-5">
                               <div className="col-10 ">
-                                  <h1  ><span className="text-start">EQUIPOS </span></h1>
-                                  <h1  ><span className="text-start">METALÚRGICOS </span></h1>
-                                  <h1  ><span className="text-start">INDUSTRIALES </span></h1>
+                                  <TituloPrincipal _tipo={T_TIPO.HOME}/>
                                   
                                   <h2 style={{ fontSize : "1.12em" }}> Diseñamos y fabricamos equipos industriales </h2>
                               </div>
@@ -74,10 +72,14 @@ export const Home = () => {
                   </div>
               
             </div>
-            <div className="col d-flex justify-content-center p-0" style={{ minHeight:"40em"}}>
+            <div className="col d-flex justify-content-center p-0" 
+              style={{ 
+                minHeight:"40em"
+              }}
+            >
                 <About />
             </div>
-            <div className="col bg-white text-center" 
+            <div className="col  text-center" 
             style={{
                minHeight:"45em",
                paddingBottom : '6em'
@@ -89,14 +91,20 @@ export const Home = () => {
                           srcImg1={cardEquipo1} srcImg2={imgHome2} srcImg3={imgHome3}
                           titulo1='EQUIPO 1'  titulo2='EQUIPO 2'  titulo3='EQUIPO 3'
                       />
+
                 <div className="d-flex justify-content-center pt-4">
-                  <Link className=' btn rounded-0 m-2' to={'equipos'} style={{backgroundColor : 'rgb(57,80,158)', color : 'rgb(255,255,255)' }}>  VEA TODOS NUESTROS EQUIPOS </Link>
+                  <BotonVerEquipos />
                 </div>
                
-             </div> 
-            <div className="col p-0 " style={{minHeight:"40em", margin : '-1em'}}>
+            </div> 
+            {/* <div className="col p-0 " 
+                style={{
+                  minHeight:"40em", 
+                  margin : '0'
+                }}
+            >
                 <Contact />
-            </div>
+            </div> */}
           </div>
         
       </main>

@@ -29,7 +29,7 @@ export const SectionEquipo = (
   return (
     <div className='container '>
          <div className="row row-cols-1 justify-content-center  ">
-            <div className="col p-3 d-flex justify-content-center"
+            <div className="col pe-0 ps-0 d-flex justify-content-center"
               onClick={ e => handleMostrarModalEquipo(e, 1)}
             >
               
