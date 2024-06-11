@@ -1,0 +1,12 @@
+{
+    "ubicacion" : {
+        "calle" :"Combatientes de Malvinas 6055",
+        "CP" : "3000",
+        "ciudad" : "Santa Fe de la Vera Cruz",
+        "provincia" :"Santa Fe",
+        "pais" : "Argentina"
+    },
+    "email" : "emimetalurgica@gmail.com",
+    "tel" : "+54 342 000554",
+    "insta" : "emi_metalurgica"
+}

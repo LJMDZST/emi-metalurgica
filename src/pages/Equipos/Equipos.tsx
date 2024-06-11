@@ -25,7 +25,7 @@ export const Equipos = () => {
   
   
   return (
-    <div className="container">
+    <div className="container animate__animated animate__fadeIn">
         <div className="row">
           <div className="col">
            <ModalEquipo _isOpen={mostrarModal} _handleClose={handleCloseModalEquipo} />
