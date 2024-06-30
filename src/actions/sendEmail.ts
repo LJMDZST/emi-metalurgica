@@ -10,25 +10,20 @@ type TDataEmail = {
 export const  sendEmail = ( data : TDataEmail )=>{
     return async()=>{
         console.log( data );
-        // let transport = nodemailer.createTransport({
-        //     host : 'localhost',
-        //     port : 587,
-        //     secure : false,
-        //     auth : {
-        //         user : 'project.1',
-        //         pass : 'secret.1'
-        //     }
-        // });
+        
+        const resp = await fetch(import.meta.env.VITE_APP_URL,{
+            method : 'POST',
+            headers : {
+                'Content-Type' : 'aplication/json'
+            },
+            body: JSON.stringify({
+                ...data
+            })
+        });
 
-        // const resp = await transport.sendMail({
-        //     from : data.email,
-        //     to : 'metalurgicaemi@gmail.com',
-        //     subject : data.asunto,
-        //     text : data.cuerpo,
-        //     html : `<p>De: ${ data.nombre} < br/> ${ data.cuerpo }</p>`
-        // });
-        // if(resp.accepted) {
-        //     alert('correo enviado !');
-        // }
+        if(resp.ok) {
+            alert('mensaje enviado !');
+        }
+
     }
 }

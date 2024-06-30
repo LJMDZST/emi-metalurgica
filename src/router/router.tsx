@@ -8,7 +8,7 @@ import { Equipos } from "../pages/Equipos/Equipos";
 
 export const router = createBrowserRouter([
     {
-        path : "/emi-metalurgica",
+        path : import.meta.env.VITE_ROOT,
         element : <App />,
         children : [
             {

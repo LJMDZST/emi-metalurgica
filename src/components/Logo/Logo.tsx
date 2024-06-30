@@ -10,7 +10,7 @@ export const Logo = ({small = false}) => {
   }
   return (
     <span className='align-content-center justify-content-end' >
-      <Link to={'/emi-metalurgica'} style={{ color:'unset',textDecoration:"none" }} onClick={handleClick}>
+      <Link to={'/'} style={{ color:'unset',textDecoration:"none" }} onClick={handleClick}>
         <img src={logoPng} width={ small ? 50 :100} />
       </Link>
     </span>

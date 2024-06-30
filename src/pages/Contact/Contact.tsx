@@ -1,8 +1,10 @@
-import { sendEmail } from '../../actions/sendEmail';
+// import { sendEmail } from '../../actions/sendEmail';
+import { useState } from 'react';
 import { CardInfo } from '../../components/ContactInfo/CardInfo';
 
 export const Contact = () => {
-
+    
+    const [sendingEmail, setSendingEmail] = useState(false);
 
     const handleSendMail = (e: React.FormEvent<HTMLFormElement>)=>{
         e.preventDefault();
@@ -11,12 +13,35 @@ export const Contact = () => {
         const asunto = e.currentTarget['asunto'];
         const texto = e.currentTarget['texto']
         
-        sendEmail({
-            nombre : nombre,
-            email : email,
-            asunto : asunto,
-            cuerpo : texto
-        });
+        setSendingEmail(true);
+        fetch(import.meta.env.VITE_API_URL,{
+            method : 'POST',
+            headers : {
+                'Content-Type' : 'application/json'
+            },
+            body: JSON.stringify({
+                nombre: nombre.value,
+                email: email.value,
+                asunto: asunto.value,
+                texto: texto.value
+            })
+        })
+        .then(
+            resp => {
+                if(resp.ok){
+                    alert('mensaje enviado !!');
+                   
+                } else {
+                    alert('error al enviar el mensaje');
+                }
+                setSendingEmail(false);
+            }
+        ).catch(
+            (e) => {
+                console.log({...e});
+                setSendingEmail(false);
+            }
+        )
     }
 
   return (
@@ -42,24 +67,24 @@ export const Contact = () => {
                             <div className="row row-cols-1" >
                                 <div className="col m-1">
                                     <label className='form-label text-white' htmlFor={'Nombre'}>Nombre</label>
-                                    <input  id={'Nombre'}className="form-control  border border-top-0 border-start-0 border-end-0 rounded-0 t"  type={'text'} />
+                                    <input  id={'Nombre'} name={'nom'} className="form-control  border border-top-0 border-start-0 border-end-0 rounded-0 t"  type={'text'} />
                                    
                                 </div>
                                 <div className="col m-1">
                                     <label className='form-label text-white' htmlFor={'Email'}>Email</label>
-                                    <input id={'Email'} className="form-control  border border-top-0 border-start-0 border-end-0 rounded-0 "  type={'email'} />
+                                    <input id={'Email'} name={'email'}  className="form-control  border border-top-0 border-start-0 border-end-0 rounded-0 "  type={'email'} />
                                 </div>
                                 <div className="col m-1">
                                     <label className='form-label text-white' htmlFor={'Asunto'}>Asunto</label>
-                                    <input id={'Asunto'}className="form-control  border border-top-0 border-start-0 border-end-0 rounded-0 "  type={'text'} />
+                                    <input id={'Asunto'} name={'asunto'} className="form-control  border border-top-0 border-start-0 border-end-0 rounded-0 "  type={'text'} />
                                 </div>
                                 <div className="col m-1">
                                     <label className='form-label text-white' htmlFor={'Mensaje'}>Mensaje</label>
-                                    <textarea id={'Mensaje'} className="form-control border border-top-0 border-start-0 border-end-0 rounded-0 "  rows={6} style={{resize : 'none'}}/>
+                                    <textarea id={'Mensaje'} name={'texto'}  className="form-control border border-top-0 border-start-0 border-end-0 rounded-0 "  rows={6} style={{resize : 'none'}}/>
                                 </div>
                                 <div className="col m-1">
                                     <input className='btn btn-outline-light rounded-0' type={'submit'} value={'Enviar'} 
-                                       
+                                       disabled={sendingEmail}
                                     />
                                 </div>
                               
