@@ -67,20 +67,20 @@ export const Contact = () => {
                             <div className="row row-cols-1" >
                                 <div className="col m-1">
                                     <label className='form-label text-white' htmlFor={'Nombre'}>Nombre</label>
-                                    <input  id={'Nombre'} name={'nom'} className="form-control  border border-top-0 border-start-0 border-end-0 rounded-0 t"  type={'text'} />
+                                    <input  id={'Nombre'} name={'nom'} className="form-control  border border-top-0 border-start-0 border-end-0 rounded-0 t"  type={'text'} required={true}/>
                                    
                                 </div>
                                 <div className="col m-1">
                                     <label className='form-label text-white' htmlFor={'Email'}>Email</label>
-                                    <input id={'Email'} name={'email'}  className="form-control  border border-top-0 border-start-0 border-end-0 rounded-0 "  type={'email'} />
+                                    <input id={'Email'} name={'email'}  className="form-control  border border-top-0 border-start-0 border-end-0 rounded-0 "  type={'email'} required={true}/>
                                 </div>
                                 <div className="col m-1">
                                     <label className='form-label text-white' htmlFor={'Asunto'}>Asunto</label>
-                                    <input id={'Asunto'} name={'asunto'} className="form-control  border border-top-0 border-start-0 border-end-0 rounded-0 "  type={'text'} />
+                                    <input id={'Asunto'} name={'asunto'} className="form-control  border border-top-0 border-start-0 border-end-0 rounded-0 "  type={'text'} required={true}/>
                                 </div>
                                 <div className="col m-1">
                                     <label className='form-label text-white' htmlFor={'Mensaje'}>Mensaje</label>
-                                    <textarea id={'Mensaje'} name={'texto'}  className="form-control border border-top-0 border-start-0 border-end-0 rounded-0 "  rows={6} style={{resize : 'none'}}/>
+                                    <textarea id={'Mensaje'} name={'texto'}  className="form-control border border-top-0 border-start-0 border-end-0 rounded-0 "  rows={6} style={{resize : 'none'}} required={true}/>
                                 </div>
                                 <div className="col m-1">
                                     <input className='btn btn-outline-light rounded-0' type={'submit'} value={'Enviar'} 
