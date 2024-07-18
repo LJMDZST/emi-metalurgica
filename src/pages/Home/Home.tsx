@@ -1,20 +1,18 @@
 
-// import { CardHighlighted } from "../../components/CardComment/CardHighlighted"
-// import { CardQuote } from "../../components/CardQuote/CardQuote"
-//  import { HomeScene } from "../../components/HomeScene/HomeScene"
-// import { ListaMarcas } from "../../components/ListaMarcas"
 import { About } from "../../components/About/About"
 import { SectionEquipo } from "../../components/Equipo/SectionEquipo";
-import imgHome1 from '../../assets/images/home/portada.jpeg';
-import imgHome2 from '../../assets/images/home/Recurso1.png';
-import imgHome3 from '../../assets/images/home/Recurso2.png';
-
-
-import cardEquipo1 from '../../assets/images/equipos-home/card-equipo1.jpg'
 
 import { useEffect, useState } from "react";
 import { T_TIPO, TituloPrincipal } from "../../components/TituloPrincipal/TituloPrincipal";
 import { BotonVerEquipos } from "../../components/BotonVerEquipos/BotonVerEquipos";
+
+import {
+  homeEquipos,
+  imgHome1,
+  imgHome2,
+  imgHome3
+} from '../../assets/images'
+
 export const Home = () => {
 
   const imagenes = [imgHome1,imgHome2,imgHome3];
@@ -85,12 +83,17 @@ export const Home = () => {
                paddingBottom : '6em'
               }}
             >
-                 <SectionEquipo
-                          handleMostrarModalEquipo={()=>{}}
-                          invertido={false}
-                          srcImg1={cardEquipo1} srcImg2={imgHome2} srcImg3={imgHome3}
-                          titulo1='EQUIPO 1'  titulo2='EQUIPO 2'  titulo3='EQUIPO 3'
-                      />
+              {
+                 Object.keys(homeEquipos).map( (i_equipo,index)=>
+                  <SectionEquipo 
+                      _id={i_equipo}
+                      handleMostrarModalEquipo={()=>{}}
+                      srcImg={homeEquipos[i_equipo].imagenes[0]} 
+                      titulo={homeEquipos[i_equipo].titulo}
+                      invertido={ index % 2 === 0}
+                  />
+                )
+              }
 
                 <div className="d-flex justify-content-center pt-4">
                   <BotonVerEquipos />

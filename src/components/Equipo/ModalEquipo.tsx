@@ -1,32 +1,38 @@
 
 import ReactModal from "react-modal"
-import cardEquipo1 from '../../assets/images/equipos-home/card-equipo1.jpg'
+import React from "react";
+
+
 
 type TPropsModalEquipo = {
     _isOpen : boolean,
+    equipo : {titulo : string , imagenes : string[]},
     _handleClose : ( e : React.MouseEvent<Element, MouseEvent> | React.KeyboardEvent<Element>) => void
 }
 
 const modalStyles : ReactModal.Styles = {
     overlay : {
-        backgroundColor : 'rgba(0,0,0,0.6)'
-        
+        backgroundColor : 'rgb(57,80,158)',
+        zIndex : '1000'
     }, 
     content : {
         top: '50%',
         left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        width: '100%',
+        width: '100vw',
+        height : '100vh',
         marginRight: '-50%',
         border : '0',
         background : 'transparent',
         transform: 'translate(-50%, -50%)',
+        
   }}
+
+
+
 
 ReactModal.setAppElement('#root')
 
-export const ModalEquipo = ( {  _isOpen, _handleClose } : TPropsModalEquipo ) => {
+export const ModalEquipo = ( {  _isOpen, equipo ,_handleClose } : TPropsModalEquipo ) => {
   console.log(_isOpen);
   return (
     <ReactModal
@@ -35,20 +41,24 @@ export const ModalEquipo = ( {  _isOpen, _handleClose } : TPropsModalEquipo ) =>
         shouldCloseOnOverlayClick={true}
         style={modalStyles}
     >
-      <div className="container animate__animated animate__fadeIn p-3" style={{background : 'rgb(57, 80, 158)'}}>
+      <div className="container animate__animated animate__fadeIn ">
         <div className="row row-cols-1">
             <div className="col d-flex justify-content-end">
-                <button className="btn btn-dark" onClick={_handleClose} > x </button>
+                <button className="btn btn-outline-light border-0" onClick={_handleClose} > x </button>
             </div>
             <div className="col" >
-                <div id="carouselEquipo" className="carousel slide">
-                    <div className="carousel-inner p-3">
-                        <div className="carousel-item active text-center">
-                            <img  src={cardEquipo1} alt="..." width={'300'}/>
-                        </div>
-                        <div className="carousel-item active text-center" >
-                        <img  src={cardEquipo1} alt="..." width={'300'}/>
-                        </div>
+                <div id="carouselEquipo" className="carousel slide" style={{height : '30rem'}}>
+                    <div className="carousel-inner " >
+                        {
+                           equipo.imagenes.map( (img,index) => 
+                            <div className={`carousel-item ${index === 0 ? 'active' : null}`} style={{height : '35em'}}>
+                                <img src={img} className="d-block w-100" alt="..." style={{objectFit : 'cover'}}/>
+                                <div className="carousel-caption d-none d-md-block">
+                                    <h5>{equipo.titulo}</h5>
+                                </div>
+                            </div>
+                           )
+                        }
                     </div>
                     <button className="carousel-control-prev"  >
                         <span className="carousel-control-prev-icon  btn btn-outline-light" 
