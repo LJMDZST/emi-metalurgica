@@ -10,23 +10,6 @@ type TPropsModalEquipo = {
     _handleClose : ( e : React.MouseEvent<Element, MouseEvent> | React.KeyboardEvent<Element>) => void
 }
 
-const modalStyles : ReactModal.Styles = {
-    overlay : {
-        backgroundColor : 'rgb(57,80,158)',
-        zIndex : '1000'
-    }, 
-    content : {
-        top: '50%',
-        left: '50%',
-        width: '100vw',
-        height : '100vh',
-        marginRight: '-50%',
-        border : '0',
-        background : 'transparent',
-        transform: 'translate(-50%, -50%)',
-        
-  }}
-
 
 
 
@@ -39,22 +22,27 @@ export const ModalEquipo = ( {  _isOpen, equipo ,_handleClose } : TPropsModalEqu
         isOpen={_isOpen}
         onRequestClose={ _handleClose }
         shouldCloseOnOverlayClick={true}
-        style={modalStyles}
+        style={{overlay : {zIndex : 1000 , backgroundColor : 'rgba(57,80,158,0.65)'}}}
+        className={'modal-fullscreen-sm-down'}
     >
-      <div className="container animate__animated animate__fadeIn ">
-        <div className="row row-cols-1">
-            <div className="col d-flex justify-content-end">
-                <button className="btn btn-outline-light border-0" onClick={_handleClose} > x </button>
-            </div>
+      <button className="btn btn-outline-light border-0 float-end sticky-top" onClick={_handleClose} > x </button>
+      <div className="container-fluid animate__animated animate__fadeIn ">
+        <div className="row mt-4">
             <div className="col" >
-                <div id="carouselEquipo" className="carousel slide" style={{height : '30rem'}}>
+                <div id="carouselEquipo" className="carousel slide" >
                     <div className="carousel-inner " >
                         {
                            equipo.imagenes.map( (img,index) => 
-                            <div className={`carousel-item ${index === 0 ? 'active' : null}`} style={{height : '35em'}}>
-                                <img src={img} className="d-block w-100" alt="..." style={{objectFit : 'cover'}}/>
-                                <div className="carousel-caption d-none d-md-block">
-                                    <h5>{equipo.titulo}</h5>
+                            <div className={`carousel-item ${index === 0 ? 'active' : null}`} style={{height : '32em'}}>
+                                <div className="row row-cols-1 justify-content-around">
+                                    <div className="col-10">
+                                        <img src={img} className="d-block  w-100" alt="equipo" style={{objectFit : 'contain'}}/>
+                                    </div>
+                                    <div className="col " >
+                                        <div className="carousel-caption d-none d-md-block" style={{backgroundColor : 'rgba(0,0,0,0.3)'}}>
+                                            <h5>{equipo.titulo}</h5>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                            )
@@ -66,7 +54,6 @@ export const ModalEquipo = ( {  _isOpen, equipo ,_handleClose } : TPropsModalEqu
                             data-bs-target={'#carouselEquipo'}
                             data-bs-slide={'prev'}
                         ></span>
-                        <span className="visually-hidden"> previous </span>
                     </button>
                     <button className="carousel-control-next "   >
                         <span className="carousel-control-next-icon  btn btn-outline-light " 
@@ -75,7 +62,6 @@ export const ModalEquipo = ( {  _isOpen, equipo ,_handleClose } : TPropsModalEqu
                             data-bs-slide={'next'}
                             style={{color: 'red'}}
                             ></span>
-                        <span className="visually-hidden"> next </span>
                     </button>
                 </div>
             </div>

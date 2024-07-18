@@ -27,30 +27,40 @@ export const Header = () => {
   
 
   return (
-    <header  id='cabecera' className={`container-fluid position-sticky top-0 p-0 animate__animated  ${ isScrollDown.current && scrollY > 300  ? 'animate__fadeOutUp' : 'animate__fadeInDown'}`} style={{
+    <header  id='cabecera' 
+    className={`container-fluid position-sticky top-0 p-0 animate__animated  ${ isScrollDown.current && scrollY > 300  ? 'animate__fadeOutUp' : 'animate__fadeInDown'}`} 
+     style={{
         fontFamily : 'header',
-       
-        backgroundColor : 'rgb(57,80,158)',
+        height : '15vh',
+        // height : scrollY < 300 ? '15vh' : '10vh' ,
         zIndex : 1000
-       } }>
+       } }
+     >
       <div className={`container-fluid `} 
         style={{
-          animationFillMode : 'forwards'
+          animationFillMode : 'forwards',
+          height : '100%',
+          backgroundColor : 'rgba(255,255,255)'
+          // backgroundColor : scrollY < 300 ? 'rgba(255,255,255)' :  'rgb(57,80,158)'
         }}
-      >
-        {
+       >
+        {/* {
           scrollY > 300 &&
-          <div className='row' > <div className='col ' > <Navbar /></div> </div>
-        }
+          <div className='row' style={{height : '100%'}} > <div className='col ' > <Navbar /></div> </div>
+        } */}
         {
-          scrollY < 300 && 
-          <div className='row' style={{height : '100%'}}>
-            <div className='col-5  d-flex justify-content-end align-content-center' 
-              style={{backgroundColor :'rgba(255,255,255)'}}>
+         
+          <div className='row' 
+            style={{
+              height : '100%'
+            }}>
+            <div className='col-5 d-flex justify-content-around align-content-center' >
               <Logo />
             </div>
             <div className='col-7 '
-              
+              style={{
+                backgroundColor : 'rgb(57,80,158)'
+              }}
             >
               <NavbarTop />
             </div>

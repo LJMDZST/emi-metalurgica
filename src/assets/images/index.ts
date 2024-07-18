@@ -19,7 +19,8 @@ const equipos : {
 
 = {
     equipo1 :equipos_equipo1,
-    equipo2 :equipos_equipo2
+    equipo2 :equipos_equipo2,
+    equipo3 : equipos_home3
 }
 
 const homeEquipos : {
