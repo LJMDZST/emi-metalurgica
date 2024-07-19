@@ -3,7 +3,6 @@ import {  NavbarTop } from '../Navbar/NavbarTop'
 import { Logo } from '../Logo/Logo';
 
 import {  useEffect, useRef, useState } from 'react';
-import { Navbar } from '../Navbar/Navbar';
 export const Header = () => {
   
   const [scrollY, setScrollY] = useState(window.scrollY);
@@ -28,7 +27,7 @@ export const Header = () => {
 
   return (
     <header  id='cabecera' 
-    className={`container-fluid position-sticky top-0 p-0 animate__animated  ${ isScrollDown.current && scrollY > 300  ? 'animate__fadeOutUp' : 'animate__fadeInDown'}`} 
+    className={`container-fluid position-sticky top-0 p-0 animate__animated  ${ isScrollDown.current && scrollY > 50  ? 'animate__fadeOutUp' : 'animate__fadeInDown'}`} 
      style={{
         fontFamily : 'header',
         height : '15vh',
@@ -49,7 +48,7 @@ export const Header = () => {
           <div className='row' style={{height : '100%'}} > <div className='col ' > <Navbar /></div> </div>
         } */}
         {
-         
+          (!isScrollDown.current) &&
           <div className='row' 
             style={{
               height : '100%'
@@ -64,7 +63,7 @@ export const Header = () => {
             >
               <NavbarTop />
             </div>
-        </div>
+          </div>
         }
         
       </div>

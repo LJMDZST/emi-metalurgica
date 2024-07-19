@@ -10,12 +10,13 @@ import {
   homeEquipos,
   imgHome1,
   imgHome2,
-  imgHome3
+  imgHome3,
+  portada
 } from '../../assets/images'
 
 export const Home = () => {
 
-  const imagenes = [imgHome1,imgHome2,imgHome3];
+  const imagenes = [imgHome1,imgHome2,imgHome3,portada];
   const [c, setC] = useState(0);
   const [imgSrc, setImgSrc] = useState(imgHome1)
 
@@ -26,10 +27,19 @@ export const Home = () => {
       } else {
         setC(c+1);
       }
-      setImgSrc(imagenes[c])
-    }, 4000);
+      
+    }, 3000);
   
   }, [c])
+
+  useEffect(() => {
+    setImgSrc(imagenes[c])
+  
+    return () => {
+      setImgSrc(imagenes[c])
+    }
+  }, [c])
+  
   
 
   

@@ -13,7 +13,16 @@ type TPropsModalEquipo = {
 
 
 
-ReactModal.setAppElement('#root')
+ReactModal.setAppElement('#root');
+
+const imgStyles : React.CSSProperties = {
+    objectFit : 'contain',
+    objectPosition : '50% 50%',
+    width : 'auto',
+    maxWidth : '70rem',
+    height : 'fit-content',
+    maxHeight : '40rem'
+}
 
 export const ModalEquipo = ( {  _isOpen, equipo ,_handleClose } : TPropsModalEquipo ) => {
   console.log(_isOpen);
@@ -36,7 +45,7 @@ export const ModalEquipo = ( {  _isOpen, equipo ,_handleClose } : TPropsModalEqu
                             <div className={`carousel-item ${index === 0 ? 'active' : null}`} style={{height : '32em'}}>
                                 <div className="row row-cols-1 justify-content-around">
                                     <div className="col-10">
-                                        <img src={img} className="d-block  w-100" alt="equipo" style={{objectFit : 'contain'}}/>
+                                        <img src={img} className="d-block  w-100" alt="equipo" style={imgStyles}/>
                                     </div>
                                     <div className="col " >
                                         <div className="carousel-caption d-none d-md-block" style={{backgroundColor : 'rgba(0,0,0,0.3)'}}>
