@@ -1,6 +1,6 @@
 import img1 from './img1eq3.jpg';
 import img2 from './img2eq3.png';
-import img3 from './img3eq3.jpg';
+import img3 from './img3eq3.png';
 
 const equipo1 = {
     titulo : 'EQUIPO 3',

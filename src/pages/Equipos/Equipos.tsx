@@ -18,13 +18,11 @@ export const Equipos = () => {
 
   const handleMostrarModalEquipo = (e : React.MouseEvent<HTMLDivElement, MouseEvent>, _id : string) => {
     e.preventDefault();
-    console.log('handleMostrarModalEquipo')
     setEquipoFocus( equipos[_id] );
     setmostrarModal( true )
   }
   const handleCloseModalEquipo =  ( e : React.MouseEvent<Element, MouseEvent> | React.KeyboardEvent<Element>)=>{
     e.preventDefault();
-    console.log('handleCloseModalEquipo')
     setmostrarModal( false )
   }
 
